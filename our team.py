@@ -18,7 +18,7 @@ angle=270
 
 with col1:
     for i,j in df[:4].iterrows():
-        st.header(j["first name"]+j["last name"])
+        st.header(j["first name"].title()+" "+j["last name"].title())
         st.write(j["role"])
         used_img=("images/"+j["image"])
         image=Image.open(used_img)
@@ -26,8 +26,8 @@ with col1:
         st.image(res)
 
 with col2:
-    for i,j in df[5:8].iterrows():
-        st.header(j["first name"]+j["last name"])
+    for i,j in df[4:8].iterrows():
+        st.header(j["first name"].title()+" "+j["last name"].title())
         st.write(j["role"])
         used_img = ("images/" + j["image"])
         image = Image.open(used_img)
@@ -36,7 +36,7 @@ with col2:
 
 with col3:
     for i,j in df[8:].iterrows():
-        st.header(j["first name"]+j["last name"])
+        st.header(j["first name"].title()+" "+j["last name"].title())
         st.write(j["role"])
         used_img = ("images/" + j["image"])
         image = Image.open(used_img)
